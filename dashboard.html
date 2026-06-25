@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Analista | CAR para Todos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html">
+          <span class="brand-badge">🌱</span>
+          <span>CAR para Todos</span>
+        </a>
+        <nav class="top-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="assistente.html">Assistente</a>
+          <a href="diagnostico.html">Diagnóstico</a>
+          <a href="academia.html">Academia</a>
+          <a class="active" href="dashboard.html">Analista</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+        <a class="btn btn-small btn-primary" href="login.html">Entrar</a>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Dashboard do analista</p>
+          <h1>Indicadores para orientar a estratégia de atendimento</h1>
+          <p>Monitore dúvidas frequentes, temas mais pesquisados e evolução de acessos.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="dashboard-item">
+            <h3>Indicadores principais</h3>
+            <div class="stats-grid">
+              <div class="stats-card"><strong>1.280</strong><span>diagnósticos</span></div>
+              <div class="stats-card"><strong>418</strong><span>usuários ativos</span></div>
+              <div class="stats-card"><strong>+32%</strong><span>crescimento</span></div>
+            </div>
+          </section>
+          <section class="dashboard-item">
+            <h3>Temas mais pesquisados</h3>
+            <div class="bar-list">
+              <div class="bar-row"><span>APP</span><div class="bar-track"><div class="bar-fill" style="width: 92%"></div></div><strong>92%</strong></div>
+              <div class="bar-row"><span>Reserva</span><div class="bar-track"><div class="bar-fill" style="width: 81%"></div></div><strong>81%</strong></div>
+              <div class="bar-row"><span>Benefícios</span><div class="bar-track"><div class="bar-fill" style="width: 74%"></div></div><strong>74%</strong></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="table-card" style="margin-top: 1rem;">
+          <h3>Últimas dúvidas registradas</h3>
+          <table>
+            <thead>
+              <tr><th>Usuário</th><th>Tema</th><th>Origem</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Produtor 1</td><td>Reserva Legal</td><td>Chat</td><td>Respondida</td></tr>
+              <tr><td>Produtor 2</td><td>APP</td><td>Diagnóstico</td><td>Em revisão</td></tr>
+              <tr><td>Analista</td><td>Benefícios</td><td>Mapa</td><td>Respondida</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>CAR para Todos · <span class="footer-year"></span></p>
+        <p>Dados e insights para fortalecer o atendimento e a educação ambiental.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

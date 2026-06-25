@@ -1,0 +1,51 @@
+# Diagrama de banco de dados
+
+## Entidades principais
+- users
+  - id
+  - name
+  - email
+  - password
+  - role_id
+  - created_at
+- roles
+  - id
+  - name
+- questions
+  - id
+  - user_id
+  - question
+  - answer
+  - created_at
+- diagnostics
+  - id
+  - user_id
+  - property_type
+  - area_ha
+  - has_app
+  - has_reserve
+  - car_status
+  - result_summary
+- modules
+  - id
+  - title
+  - description
+  - score_value
+- benefits
+  - id
+  - title
+  - state
+  - city
+  - description
+- logs
+  - id
+  - user_id
+  - action
+  - created_at
+
+## Relacionamentos
+- users pertence a roles
+- questions pertence a users
+- diagnostics pertence a users
+- logs pertence a users
+- modules e benefits são independentes, mas podem ser associadas a usuários via progresso e inscrição

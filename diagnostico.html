@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagnóstico Inteligente | CAR para Todos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="diagnostico">
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html">
+          <span class="brand-badge">🌱</span>
+          <span>CAR para Todos</span>
+        </a>
+        <nav class="top-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="assistente.html">Assistente</a>
+          <a class="active" href="diagnostico.html">Diagnóstico</a>
+          <a href="academia.html">Academia</a>
+          <a href="dashboard.html">Analista</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+        <a class="btn btn-small btn-primary" href="login.html">Entrar</a>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Diagnóstico inteligente</p>
+          <h1>Entenda sua situação e receba recomendações práticas</h1>
+          <p>Responda a um questionário guiado e gere um relatório com pendências e próximos passos.</p>
+        </div>
+
+        <div class="auth-grid">
+          <section class="auth-card">
+            <form id="diagnosticForm" class="auth-form">
+              <div class="form-grid">
+                <label>
+                  Tipo da propriedade
+                  <select id="propertyType">
+                    <option value="Agricultura">Agricultura</option>
+                    <option value="Pecuária">Pecuária</option>
+                    <option value="Mista">Mista</option>
+                  </select>
+                </label>
+                <label>
+                  Área aproximada (hectares)
+                  <input id="propertyArea" type="number" min="0" value="80" />
+                </label>
+              </div>
+              <label>
+                <input id="hasApp" type="checkbox" />
+                Possui APP identificada?
+              </label>
+              <label>
+                <input id="hasReserva" type="checkbox" checked />
+                Possui Reserva Legal presente?
+              </label>
+              <label>
+                Situação atual do CAR
+                <select id="carStatus">
+                  <option value="regularizado">Regularizado</option>
+                  <option value="em-analise">Em análise</option>
+                  <option value="pendente">Pendente</option>
+                </select>
+              </label>
+              <button type="submit">Gerar relatório</button>
+            </form>
+            <div id="diagnosticResult" class="result-panel hidden"></div>
+          </section>
+
+          <aside class="panel">
+            <h3>O que o relatório considera</h3>
+            <ul class="check-list">
+              <li>Tipo de exploração rural</li>
+              <li>Área estimada da propriedade</li>
+              <li>Presença de APP e Reserva Legal</li>
+              <li>Situação atual do cadastro</li>
+            </ul>
+            <div class="result-panel">
+              <h3>Benefício</h3>
+              <p>Ajuda a priorizar ações corretivas e orienta sobre a próxima etapa da regularização.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>CAR para Todos · <span class="footer-year"></span></p>
+        <p>Diagnóstico acessível para apoiar a regularização com segurança.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

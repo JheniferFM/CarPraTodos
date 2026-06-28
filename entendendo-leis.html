@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="public/css/design-system.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .law-card { height: 100%; display: flex; flex-direction: column; }
+    .law-card .btn { margin-top: auto; align-self: flex-start; }
+    .step-number { width: 2.25rem; height: 2.25rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--bs-primary); color: #fff; font-weight: 700; margin-bottom: 1rem; }
+  </style>
 </head>
 <body>
   <header class="navbar-wrapper">
@@ -21,6 +26,7 @@
       </div>
     </nav>
   </header>
+
   <main>
     <section class="page-hero">
       <div class="container">
@@ -28,7 +34,7 @@
           <div class="col-lg-7">
             <span class="hero-label">Entendendo as leis</span>
             <h1 class="section-title">Legislação ambiental em linguagem simples</h1>
-            <p class="lead page-summary">Traduza o Código Florestal, APP, reserva legal e programas ambientais em um passo a passo fácil para o produtor rural.</p>
+            <p class="lead page-summary">Escolha um assunto e avance, passo a passo, pelas principais regras do CAR.</p>
             <div class="mt-4 d-flex flex-wrap gap-3">
               <a href="index.html" class="btn btn-outline-secondary">Voltar à página inicial</a>
               <a href="assistant.html" class="btn btn-primary">Fazer diagnóstico</a>
@@ -37,16 +43,13 @@
           <div class="col-lg-5">
             <div class="page-hero-box p-4 rounded-4 shadow-sm bg-white border">
               <div class="d-flex align-items-center justify-content-between mb-3">
-                <div>
-                  <h3 class="mb-1">Do jurídico ao prático</h3>
-                  <p class="mb-0 text-muted">Legislação explicada com exemplos reais.</p>
-                </div>
-                <span class="badge bg-info text-dark">Essencial</span>
+                <div><h3 class="mb-1">Do jurídico ao prático</h3><p class="mb-0 text-muted">Comece pelo Código Florestal ou vá direto à sua dúvida.</p></div>
+                <span class="badge bg-info text-dark">9 etapas</span>
               </div>
               <ul class="feature-list">
-                <li><i class="bi bi-book-half"></i> Código Florestal</li>
-                <li><i class="bi bi-tree-fill"></i> APP e Reserva Legal</li>
-                <li><i class="bi bi-lightbulb-fill"></i> Mitos e Verdades</li>
+                <li><i class="bi bi-book-half"></i> Explicações sem juridiquês</li>
+                <li><i class="bi bi-arrow-right-circle-fill"></i> Navegação passo a passo</li>
+                <li><i class="bi bi-lightbulb-fill"></i> Exemplos para o produtor</li>
               </ul>
             </div>
           </div>
@@ -56,107 +59,22 @@
 
     <section class="page-content section section-soft">
       <div class="container">
+        <div class="mb-4">
+          <span class="hero-label">Menu de assuntos</span>
+          <h2 class="section-title h1">Por onde você quer começar?</h2>
+          <p class="text-muted">Siga a ordem sugerida ou escolha apenas o tema que precisa consultar.</p>
+        </div>
+
         <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="page-feature-card">
-              <h3>Código Florestal</h3>
-              <p>O Código Florestal é a lei que define como usar e proteger áreas rurais. Ele existe para equilibrar produção e preservação.</p>
-              <ul class="feature-list">
-                <li><i class="bi bi-check-circle-fill"></i> O que é?</li>
-                <li><i class="bi bi-check-circle-fill"></i> Objetivos</li>
-                <li><i class="bi bi-check-circle-fill"></i> Por que ele existe?</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="page-feature-card">
-              <h3>Área de Preservação Permanente (APP)</h3>
-              <p>APP é uma faixa de proteção ambiental ao longo de rios, nascentes, lagos e encostas.</p>
-              <p><strong>Exemplos:</strong> margem de rio, nascente, topo de encosta.</p>
-              <p><strong>Pode fazer:</strong> manejo leve e conservação.</p>
-              <p><strong>Não pode fazer:</strong> desmatar ou construir no limite.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4 mt-3">
-          <div class="col-lg-6">
-            <div class="page-feature-card">
-              <h3>Reserva Legal</h3>
-              <p>Reserva Legal é a área da propriedade que deve ser mantida com vegetação nativa.</p>
-              <p>Exemplo prático: em uma propriedade de 100 hectares, cerca de 20 hectares podem precisar ser preservados como reserva.</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="page-feature-card">
-              <h3>Área Consolidada</h3>
-              <p>Área Consolidada é o espaço onde já existe uso antigo, como pasto ou plantio, e que pode ter regras diferentes de regularização.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4 mt-3">
-          <div class="col-lg-6">
-            <div class="page-feature-card">
-              <h3>Programa de Regularização Ambiental (PRA)</h3>
-              <p>O PRA é a ferramenta para recuperar e regularizar áreas que não estão em conformidade com as regras ambientais.</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="page-feature-card">
-              <h3>PSA e CRA</h3>
-              <p>PSA é Pagamento por Serviços Ambientais. CRA são Cotas de Reserva Ambiental, usadas para compensar áreas de reserva.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="page-feature-card mt-4">
-          <h3>Direitos e deveres do produtor</h3>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <p><strong>Direitos:</strong> acesso a crédito, apoio técnico e programas de recuperação.</p>
-            </div>
-            <div class="col-md-6">
-              <p><strong>Deveres:</strong> proteger APP, manter reserva legal e informar dados corretos no CAR.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="page-feature-card mt-4">
-          <h3>Casos práticos</h3>
-          <p><strong>Tenho um rio na minha propriedade.</strong> Isso significa que a área ao redor do rio é APP. Você pode manter a vegetação e usar com cuidado, mas não cortar ou construir perto demais.</p>
-        </div>
-
-        <div class="page-feature-card mt-4">
-          <h3>Mitos e Verdades</h3>
-          <div class="row g-3">
-            <div class="col-md-4">
-              <div class="page-feature-card p-3">
-                <h4>Mito</h4>
-                <p>Vou perder minha terra.</p>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div class="page-feature-card p-3">
-                <h4>Verdade</h4>
-                <p>O CAR ajuda a regularizar e proteger, não retira a propriedade.</p>
-              </div>
-            </div>
-          </div>
-          <div class="row g-3 mt-3">
-            <div class="col-md-4">
-              <div class="page-feature-card p-3">
-                <h4>Mito</h4>
-                <p>Vou receber multa automaticamente.</p>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div class="page-feature-card p-3">
-                <h4>Verdade</h4>
-                <p>Multas dependem do caso. O importante é cadastrar e seguir as orientações do PRA.</p>
-              </div>
-            </div>
-          </div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>Código Florestal</h3><p class="mb-4">Entenda a lei que organiza a proteção e o uso sustentável das áreas rurais.</p><a href="entendendo-leis/codigo-florestal.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>Área de Preservação Permanente (APP)</h3><p class="mb-4">Veja como proteger rios, nascentes, lagos, encostas e outras áreas sensíveis.</p><a href="entendendo-leis/app.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>Reserva Legal</h3><p class="mb-4">Saiba qual parte do imóvel deve manter vegetação nativa e como ela pode ser usada.</p><a href="entendendo-leis/reserva-legal.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>Área Consolidada</h3><p class="mb-4">Entenda as regras para áreas ocupadas antes de 22 de julho de 2008.</p><a href="entendendo-leis/area-consolidada.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>Programa de Regularização Ambiental (PRA)</h3><p class="mb-4">Conheça o caminho para corrigir pendências ambientais depois da análise do CAR.</p><a href="entendendo-leis/pra.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>PSA e CRA</h3><p class="mb-4">Descubra formas de valorização e compensação pela conservação ambiental.</p><a href="entendendo-leis/psa-cra.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>Direitos e deveres do produtor</h3><p class="mb-4">Confira responsabilidades, benefícios e cuidados ao fornecer informações no CAR.</p><a href="entendendo-leis/direitos-deveres.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>Casos práticos</h3><p class="mb-4">Veja exemplos sobre rios, nascentes, produção e regularização do imóvel.</p><a href="entendendo-leis/casos-praticos.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
+          <div class="col-lg-6"><div class="page-feature-card law-card"><h3>Mitos e Verdades</h3><p class="mb-4">Esclareça dúvidas comuns sobre perda da terra, multas e cadastro ambiental.</p><a href="entendendo-leis/mitos-verdades.html" class="btn btn-primary">Saiba mais <i class="bi bi-arrow-right"></i></a></div></div>
         </div>
 
         <div class="page-feature-card mt-4">

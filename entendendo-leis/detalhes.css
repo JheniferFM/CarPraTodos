@@ -1,0 +1,9 @@
+.law-page { padding-top: 120px; }
+.law-progress { font-size: .9rem; font-weight: 700; color: var(--bs-primary); }
+.law-content { max-width: 860px; margin-inline: auto; }
+.law-topic { padding: 1.5rem; border: 1px solid rgba(0,0,0,.08); border-radius: 1rem; background: #fff; }
+.law-topic + .law-topic { margin-top: 1rem; }
+.law-topic h2 { font-size: 1.25rem; }
+.law-alert { border-left: 4px solid var(--bs-warning); }
+.law-navigation { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+

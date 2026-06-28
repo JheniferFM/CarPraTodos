@@ -3,165 +3,202 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CAR para Todos | Plataforma de regularização ambiental</title>
+    <title>CAR para Todos | Entenda a legislação e regularize com confiança</title>
     <meta
       name="description"
-      content="Uma plataforma inteligente para explicar o CAR, apoiar diagnósticos e democratizar o acesso à regularização ambiental."
+      content="Uma plataforma moderna, acessível e inteligente para traduzir a legislação do Cadastro Ambiental Rural em linguagem simples e orientar produtores rurais e analistas."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="public/css/design-system.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-page="home">
-    <header class="site-header">
-      <div class="container nav-bar">
-        <a class="brand" href="index.html">
-          <span class="brand-badge">🌱</span>
-          <span>CAR para Todos</span>
-        </a>
-        <nav class="top-nav" aria-label="Navegação principal">
-          <a href="index.html">Início</a>
-          <a href="assistente.html">Assistente</a>
-          <a href="diagnostico.html">Diagnóstico</a>
-          <a href="academia.html">Academia</a>
-          <a href="dashboard.html">Analista</a>
-          <a href="admin.html">Admin</a>
-        </nav>
-        <a class="btn btn-small btn-primary" href="login.html">Entrar</a>
-      </div>
+  <body>
+    <header class="navbar-wrapper">
+      <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+          <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home">
+            <img src="ChatGPT Image 26 de jun. de 2026, 16_18_59.png" alt="Logo CAR para Todos" class="brand-logo" />
+            <span>CAR para Todos</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Alternar navegação"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav gap-lg-3">
+              <li class="nav-item"><a class="nav-link" id="navRecursos" href="#servicos">Recursos</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-2 ms-lg-3">
+              <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle language-toggle" type="button" id="languageDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://img.icons8.com/fluency/24/brazil.png" alt="BR" class="language-flag-icon">
+                  BR
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownButton">
+                  <li><button class="dropdown-item language-option" data-lang="pt" type="button"><img src="https://img.icons8.com/fluency/20/brazil.png" alt="BR" class="language-option-flag"/> Português</button></li>
+                  <li><button class="dropdown-item language-option" data-lang="no" type="button"><img src="https://img.icons8.com/?size=100&id=JSgvmncLWozY&format=png&color=000000" alt="NO" class="language-option-flag"/> Norsk</button></li>
+                  <li><button class="dropdown-item language-option" data-lang="en" type="button"><img src="https://img.icons8.com/?size=100&id=aRiu1GGi6Aoe&format=png&color=000000" alt="EN" class="language-option-flag"/> English</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">Hackathon ENAP · CAR</p>
-            <h1>Transformando leis complexas em orientações simples para todos.</h1>
-            <p class="lead">
-              Uma plataforma que aproxima produtores rurais, analistas ambientais e cidadãos do
-              Cadastro Ambiental Rural por meio de IA, orientação acessível e diagnóstico guiado.
-            </p>
-            <div class="hero-actions">
-              <a href="diagnostico.html" class="btn btn-primary">Testar diagnóstico</a>
-              <a href="assistente.html" class="btn btn-secondary">Abrir assistente</a>
-            </div>
-            <div class="hero-metrics">
-              <div class="metric-card">
-                <strong>+1,2 mil</strong>
-                <span>usuários ativos</span>
-              </div>
-              <div class="metric-card">
-                <strong>84%</strong>
-                <span>mais clareza nas dúvidas</span>
-              </div>
-              <div class="metric-card">
-                <strong>24/7</strong>
-                <span>atendimento com voz e texto</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel hero-panel">
-            <h3>O que a plataforma entrega</h3>
-            <ul class="check-list">
-              <li>Explicação de termos e obrigações em linguagem simples</li>
-              <li>Guia de regularização adaptado à realidade da propriedade</li>
-              <li>Conteúdo educativo com quizzes, certificados e ranking</li>
-            </ul>
-            <div class="pill">MVP funcional para apresentação</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section container">
-        <div class="section-title">
-          <p class="eyebrow">Módulos principais</p>
-          <h2>Uma experiência completa para cada etapa da regularização</h2>
-        </div>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Assistente inteligente</h3>
-            <p>Responde dúvidas sobre APP, Reserva Legal, CAR e benefícios com linguagem simples.</p>
-          </article>
-          <article class="card">
-            <h3>Diagnóstico guiado</h3>
-            <p>Coleta dados da propriedade e gera relatório, pendências e próximos passos.</p>
-          </article>
-          <article class="card">
-            <h3>Academia CAR</h3>
-            <p>Oferece trilhas, módulos, quiz e certificados para fortalecer o aprendizado.</p>
-          </article>
-          <article class="card">
-            <h3>Mapa de benefícios</h3>
-            <p>Mostra programas, crédito rural e incentivos ambientais por estado e município.</p>
-          </article>
-          <article class="card">
-            <h3>Dashboard analítico</h3>
-            <p>Mostra temas mais buscados, diagnósticos realizados e evolução dos acessos.</p>
-          </article>
-          <article class="card">
-            <h3>Acessibilidade completa</h3>
-            <p>Alta contrastes, tamanho de fonte, leitura de tela e navegação por teclado.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section alt-section">
+    <main id="home">
+      <section class="hero-section">
         <div class="container">
-          <div class="section-title">
-            <p class="eyebrow">Impacto proposto</p>
-            <h2>Mais transparência, mais confiança e mais regularização.</h2>
-          </div>
-          <div class="stats-grid">
-            <div class="stats-card">
-              <strong>3x</strong>
-              <span>mais entendimento do conteúdo jurídico</span>
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="hero-copy-card">
+                <span class="eyebrow" id="heroGreeting">Olá, João! 👋</span>
+                <h1 class="hero-title" id="heroTitle">Entenda. <span class="hero-highlight hero-highlight-regularize">Regularize.</span> <span class="hero-highlight hero-highlight-preserve">Preserve.</span></h1>
+                <p class="hero-subtitle" id="heroSubtitle">Entenda a legislação do CAR de forma simples e receba orientações práticas para regularizar sua propriedade com segurança.</p>
+                <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
+                  <a href="assistant.html" class="btn btn-primary btn-lg" id="heroBtnDiagnostico">Fazer diagnóstico</a>
+                </div>
+              </div>
             </div>
-            <div class="stats-card">
-              <strong>40%</strong>
-              <span>menos dúvidas repetitivas para analistas</span>
-            </div>
-            <div class="stats-card">
-              <strong>100%</strong>
-              <span>acesso a orientações básicas por voz e texto</span>
+            <div class="col-lg-6">
+              <div class="hero-visual" aria-hidden="true"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section container feature-row">
-        <div class="feature-copy">
-          <p class="eyebrow">Por que isso importa</p>
-          <h2>Democratizar o acesso ao CAR é um passo concreto para a sustentabilidade rural.</h2>
-          <p>
-            A plataforma transforma a legislação em um caminho prático, acolhedor e compreensível,
-            apoiando produtores que precisam tomar decisões com segurança e responsabilidade.
-          </p>
-          <a href="login.html" class="btn btn-primary">Acessar a plataforma</a>
-        </div>
-        <div class="panel">
-          <h3>Próximos passos do MVP</h3>
-          <ul class="check-list">
-            <li>Integração com autenticação real</li>
-            <li>Conexão com IA generativa</li>
-            <li>Persistência de histórico de perguntas</li>
-            <li>Dashboard com gráficos em tempo real</li>
-          </ul>
+      <section id="sobre" class="section section-soft">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <span class="eyebrow" id="sobreLabel">Sobre</span>
+            <h2 class="section-title" id="sobreTitle">O que é o CAR para Todos, nossa missão e objetivo.</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="about-card p-4 h-100">
+                <div class="about-card-icon"><i class="bi bi-globe2"></i></div>
+                <h3 id="aboutCard1Title">O que é o CAR para Todos</h3>
+                <p id="aboutCard1Text">Uma plataforma clara e amigável que traduz a legislação do Cadastro Ambiental Rural em orientações práticas para produtores e instituições.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="about-card p-4 h-100">
+                <div class="about-card-icon"><i class="bi bi-people"></i></div>
+                <h3 id="aboutCard2Title">Missão</h3>
+                <p id="aboutCard2Text">Facilitar o acesso à informação e oferecer suporte confiável para que a regularização ambiental seja mais simples e transparente.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="about-card p-4 h-100">
+                <div class="about-card-icon"><i class="bi bi-bullseye"></i></div>
+                <h3 id="aboutCard3Title">Objetivo</h3>
+                <p id="aboutCard3Text">Guiar cada propriedade com orientações objetivas para garantir a regularização do CAR com segurança e tranquilidade.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
+
+      <section id="servicos" class="section">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <span class="eyebrow" id="servicosLabel">O que você deseja fazer hoje?</span>
+            <h2 class="section-title" id="servicosTitle">Acesse as principais funcionalidades com rapidez.</h2>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+            <div class="col">
+              <a href="entender-car.html" class="service-card p-4 d-block text-decoration-none">
+                <div class="service-icon bg-soft-green"><i class="bi bi-journal-bookmark-fill"></i></div>
+                <h4 id="service1Title">Entender meu CAR</h4>
+                <p id="service1Text">Veja o que o cadastro significa para sua propriedade.</p>
+                <span class="service-arrow"><i class="bi bi-chevron-right"></i></span>
+              </a>
+            </div>
+            <div class="col">
+              <a href="entendendo-leis.html" class="service-card p-4 d-block text-decoration-none">
+                <div class="service-icon bg-soft-blue"><i class="bi bi-book-half"></i></div>
+                <h4 id="service2Title">Entendendo as leis</h4>
+                <p id="service2Text">Saiba o que o Código Florestal exige, em linguagem simples.</p>
+                <span class="service-arrow"><i class="bi bi-chevron-right"></i></span>
+              </a>
+            </div>
+            <div class="col">
+              <a href="conversar-analista.html" class="service-card p-4 d-block text-decoration-none">
+                <div class="service-icon bg-soft-purple"><i class="bi bi-chat-dots-fill"></i></div>
+                <h4 id="service3Title">Conversar com Analista Ambiental</h4>
+                <p id="service3Text">Tire dúvidas com um assistente inteligente a qualquer momento.</p>
+                <span class="service-arrow"><i class="bi bi-chevron-right"></i></span>
+              </a>
+            </div>
+            <div class="col">
+              <a href="minha-situacao.html" class="service-card p-4 d-block text-decoration-none">
+                <div class="service-icon bg-soft-orange"><i class="bi bi-clipboard-check"></i></div>
+                <h4 id="service4Title">Minha situação</h4>
+                <p id="service4Text">Veja o status do seu cadastro e pontos de atenção.</p>
+                <span class="service-arrow"><i class="bi bi-chevron-right"></i></span>
+              </a>
+            </div>
+            <div class="col">
+              <a href="academia-car.html" class="service-card p-4 d-block text-decoration-none">
+                <div class="service-icon bg-soft-cyan"><i class="bi bi-mortarboard-fill"></i></div>
+                <h4 id="service6Title">Academia CAR</h4>
+                <p id="service6Text">Aprenda com cursos e trilhas sobre legislação e práticas.</p>
+                <span class="service-arrow"><i class="bi bi-chevron-right"></i></span>
+              </a>
+            </div>
+            <div class="col">
+              <a href="dashboard.html" class="service-card p-4 d-block text-decoration-none">
+                <div class="service-icon bg-soft-teal"><i class="bi bi-bar-chart-line-fill"></i></div>
+                <h4>Dashboard Governo</h4>
+                <p>Visão estratégica, indicadores e ações para gestão pública.</p>
+                <span class="service-arrow"><i class="bi bi-chevron-right"></i></span>
+              </a>
+            </div>
+            <div class="col">
+              <a href="beneficios.html" class="service-card p-4 d-block text-decoration-none">
+                <div class="service-icon bg-soft-lime"><i class="bi bi-award-fill"></i></div>
+                <h4 id="service7Title">Benefícios</h4>
+                <p id="service7Text">Entenda como a regularização abre portas para apoios.</p>
+                <span class="service-arrow"><i class="bi bi-chevron-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <p>CAR para Todos · <span class="footer-year"></span></p>
-        <p>Plataforma de apoio à regularização ambiental com foco em acessibilidade e simplicidade.</p>
+    <footer id="contato" class="footer">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h3 id="footerTitle">CAR para Todos</h3>
+            <p id="footerText">Uma plataforma moderna para traduzir a legislação do CAR em linguagem simples, apoiar produtores rurais e fortalecer a compreensão ambiental e institucional.</p>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <a href="#home" class="btn btn-outline-light me-2" id="footerBtnTop">Voltar ao topo</a>
+            <a href="#faq" class="btn btn-primary" id="footerBtnContact">Fale conosco</a>
+          </div>
+        </div>
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/accessibility.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

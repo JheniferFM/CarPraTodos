@@ -1,0 +1,496 @@
+colo <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Governo | CAR para Todos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('css/design-system.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-building"></i></div>
+                <div>
+                    <h4>CAR para Todos</h4>
+                    <p>Painel Governo</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="nav-link active" href="#"><i class="bi bi-bar-chart-line"></i><span>Indicadores</span></a>
+                <a class="nav-link" href="#"><i class="bi bi-people"></i><span>Usuários</span></a>
+                <a class="nav-link" href="#"><i class="bi bi-journal-bookmark"></i><span>Conteúdos</span></a>
+                <a class="nav-link" href="#"><i class="bi bi-robot"></i><span>IA</span></a>
+                <a class="nav-link" href="#"><i class="bi bi-search-heart"></i><span>Diagnósticos</span></a>
+                <a class="nav-link" href="#"><i class="bi bi-map"></i><span>Benefícios</span></a>
+                <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i><span>Relatórios</span></a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="profile-summary">
+                    <div class="profile-avatar">G</div>
+                    <div>
+                        <strong>Gestor Público</strong>
+                        <small>Governança</small>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <p class="mb-1">ICL Atual</p>
+                    <strong>78 / 100</strong>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar topbar-dashboard">
+                <div class="topbar-left">
+                    <div>
+                        <p class="eyebrow mb-1">Visão Estratégica</p>
+                        <h1>Dashboard Governo</h1>
+                    </div>
+                    <div class="filter-group gap-2">
+                        <div class="filter-pill">
+                            <span>Período</span>
+                            <strong>Últimos 30 dias</strong>
+                        </div>
+                        <div class="filter-pill">
+                            <span>Estado</span>
+                            <strong>Todos</strong>
+                        </div>
+                        <div class="filter-pill">
+                            <span>Município</span>
+                            <strong>Todos</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+                    <div class="search-wrapper">
+                        <i class="bi bi-search"></i>
+                        <input type="search" placeholder="Buscar painel, tema ou estado" aria-label="Buscar painel">
+                    </div>
+                    <button class="icon-btn"><i class="bi bi-bell"></i></button>
+                    <div class="profile-pill">
+                        <div class="profile-avatar">G</div>
+                        <div>
+                            <strong>Governador</strong>
+                            <small>Administração</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="row g-4 top-metrics">
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <article class="metric-card">
+                        <div class="metric-icon bg-green-light"><i class="bi bi-people-fill"></i></div>
+                        <p class="metric-label">Produtores Cadastrados</p>
+                        <h3>12.458</h3>
+                        <span class="metric-trend text-success">↑ +8,4% este mês</span>
+                    </article>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <article class="metric-card">
+                        <div class="metric-icon bg-blue-light"><i class="bi bi-chat-square-text-fill"></i></div>
+                        <p class="metric-label">Perguntas IA</p>
+                        <h3>156.320</h3>
+                        <span class="metric-trend text-success">↑ +18%</span>
+                    </article>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <article class="metric-card">
+                        <div class="metric-icon bg-teal-light"><i class="bi bi-list-task"></i></div>
+                        <p class="metric-label">Diagnósticos</p>
+                        <h3>8.923</h3>
+                        <span class="metric-trend text-success">↑ +12%</span>
+                    </article>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <article class="metric-card">
+                        <div class="metric-icon bg-amber-light"><i class="bi bi-award-fill"></i></div>
+                        <p class="metric-label">Certificados</p>
+                        <h3>4.315</h3>
+                        <span class="metric-trend text-muted">Últimos 30 dias</span>
+                    </article>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <article class="metric-card">
+                        <div class="metric-icon bg-indigo-light"><i class="bi bi-book-half"></i></div>
+                        <p class="metric-label">Cursos Concluídos</p>
+                        <h3>6.712</h3>
+                        <span class="metric-trend text-muted">Taxa de conclusão 74%</span>
+                    </article>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <article class="metric-card metric-card-icl">
+                        <div class="icl-label">ICL</div>
+                        <div class="icl-value">78<small>%</small></div>
+                        <p class="metric-label">Índice de Compreensão da Legislação</p>
+                        <span class="metric-trend text-success">Forte entendimento</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="row g-4 mb-4">
+                <div class="col-xl-8">
+                    <div class="chart-card">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 1</p>
+                                <h4>Evolução dos Usuários</h4>
+                            </div>
+                            <span class="badge badge-soft-primary">Cadastros / Diagnósticos / Cursos</span>
+                        </div>
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="chart-card small-chart-card">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 2</p>
+                                <h4>Dúvidas Mais Frequentes</h4>
+                            </div>
+                        </div>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row g-4 mb-4">
+                <div class="col-xl-6">
+                    <div class="panel-card map-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 3</p>
+                                <h4>Mapa do Brasil</h4>
+                            </div>
+                        </div>
+                        <div class="map-content">
+                            <div class="map-legend">
+                                <span class="legend-dot legend-high"></span> Alto entendimento
+                                <span class="legend-dot legend-medium"></span> Médio
+                                <span class="legend-dot legend-low"></span> Baixo
+                            </div>
+                            <div class="map-placeholder">
+                                <div class="state-chip active" data-state="São Paulo">SP</div>
+                                <div class="state-chip" data-state="Minas Gerais">MG</div>
+                                <div class="state-chip" data-state="Bahia">BA</div>
+                                <div class="state-chip" data-state="Amazonas">AM</div>
+                                <div class="state-chip" data-state="Rio Grande do Sul">RS</div>
+                            </div>
+                            <div class="map-details">
+                                <h5 id="mapStateName">São Paulo</h5>
+                                <p class="text-muted">Usuários 3.120 · Diagnósticos 1.045 · Cursos 950 · Certificados 480 · Dúvidas 760</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="panel-card table-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 4</p>
+                                <h4>Municípios</h4>
+                            </div>
+                            <button class="btn btn-outline-secondary btn-sm">Exportar</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-sm align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Município</th>
+                                        <th>Estado</th>
+                                        <th>Usuários</th>
+                                        <th>Diagnósticos</th>
+                                        <th>Cursos</th>
+                                        <th>Índice</th>
+                                        <th>Pendências</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Uberlândia</td>
+                                        <td>MG</td>
+                                        <td>1.240</td>
+                                        <td>184</td>
+                                        <td>210</td>
+                                        <td><span class="badge badge-success">82</span></td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campinas</td>
+                                        <td>SP</td>
+                                        <td>1.050</td>
+                                        <td>170</td>
+                                        <td>198</td>
+                                        <td><span class="badge badge-success">79</span></td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feira de Santana</td>
+                                        <td>BA</td>
+                                        <td>930</td>
+                                        <td>120</td>
+                                        <td>150</td>
+                                        <td><span class="badge badge-warning">68</span></td>
+                                        <td>22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manaus</td>
+                                        <td>AM</td>
+                                        <td>720</td>
+                                        <td>98</td>
+                                        <td>115</td>
+                                        <td><span class="badge badge-danger">55</span></td>
+                                        <td>31</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row g-4 mb-4">
+                <div class="col-xl-4">
+                    <div class="panel-card ranking-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 5</p>
+                                <h4>Conteúdos Mais Acessados</h4>
+                            </div>
+                        </div>
+                        <ol class="ranking-list">
+                            <li>Introdução ao CAR</li>
+                            <li>APP</li>
+                            <li>Reserva Legal</li>
+                            <li>Código Florestal</li>
+                            <li>PSA</li>
+                            <li>PRA</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="panel-card ia-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 6</p>
+                                <h4>Perguntas mais feitas</h4>
+                            </div>
+                        </div>
+                        <ul class="qa-list">
+                            <li>O que é APP?</li>
+                            <li>Tenho um rio.</li>
+                            <li>Vou perder minha terra?</li>
+                            <li>Como fazer o CAR?</li>
+                        </ul>
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="panel-card academy-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 7</p>
+                                <h4>Academia</h4>
+                            </div>
+                        </div>
+                        <div class="academy-stats">
+                            <div>
+                                <strong>1.240</strong>
+                                <p>Cursos iniciados</p>
+                            </div>
+                            <div>
+                                <strong>6.712</strong>
+                                <p>Cursos concluídos</p>
+                            </div>
+                            <div>
+                                <strong>38h</strong>
+                                <p>Tempo médio</p>
+                            </div>
+                            <div>
+                                <strong>74%</strong>
+                                <p>Taxa de conclusão</p>
+                            </div>
+                            <div>
+                                <strong>4.315</strong>
+                                <p>Certificados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row g-4 mb-4">
+                <div class="col-xl-4">
+                    <div class="panel-card donut-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 8</p>
+                                <h4>Diagnóstico</h4>
+                            </div>
+                        </div>
+                        <canvas id="donutChart"></canvas>
+                        <div class="diagnostic-key">
+                            <span class="dot dot-green"></span> Regular
+                            <span class="dot dot-warning"></span> Atenção
+                            <span class="dot dot-orange"></span> Possível Pendência
+                            <span class="dot dot-danger"></span> Necessita Apoio
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="panel-card benefits-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 9</p>
+                                <h4>Benefícios consultados</h4>
+                            </div>
+                        </div>
+                        <ul class="benefits-list">
+                            <li>PSA</li>
+                            <li>PRA</li>
+                            <li>Crédito Rural</li>
+                            <li>Incentivos</li>
+                            <li>Linhas de financiamento</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="panel-card alerts-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 10</p>
+                                <h4>Alertas</h4>
+                            </div>
+                        </div>
+                        <ul class="alert-list">
+                            <li>Estado com baixo índice de conhecimento</li>
+                            <li>Municípios sem novos acessos</li>
+                            <li>Aumento de dúvidas sobre PRA</li>
+                            <li>Queda na conclusão dos cursos</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row g-4 mb-4">
+                <div class="col-xl-6">
+                    <div class="panel-card reports-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 11</p>
+                                <h4>Relatórios</h4>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <button class="btn btn-primary">Exportar PDF</button>
+                            <button class="btn btn-outline-secondary">Exportar Excel</button>
+                            <button class="btn btn-outline-secondary">Gerar apresentação</button>
+                            <button class="btn btn-outline-secondary">Imprimir</button>
+                            <button class="btn btn-outline-secondary">Compartilhar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="panel-card users-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 12</p>
+                                <h4>Gestão de Usuários</h4>
+                            </div>
+                        </div>
+                        <div class="users-grid">
+                            <div>
+                                <strong>12.458</strong>
+                                <p>Total de usuários</p>
+                            </div>
+                            <div>
+                                <strong>1.024</strong>
+                                <p>Novos usuários</p>
+                            </div>
+                            <div>
+                                <strong>9.120</strong>
+                                <p>Ativos</p>
+                            </div>
+                            <div>
+                                <strong>2.338</strong>
+                                <p>Inativos</p>
+                            </div>
+                        </div>
+                        <div class="profile-distribution">
+                            <span>Produtor Rural</span><strong>69%</strong>
+                            <span>Técnico</span><strong>18%</strong>
+                            <span>Analista Ambiental</span><strong>13%</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row g-4 mb-4">
+                <div class="col-xl-6">
+                    <div class="panel-card campaigns-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 13</p>
+                                <h4>Campanhas Educativas</h4>
+                            </div>
+                        </div>
+                        <div class="campaign-stats">
+                            <div>
+                                <strong>24</strong>
+                                <p>Campanhas criadas</p>
+                            </div>
+                            <div>
+                                <strong>48k</strong>
+                                <p>Visualizações</p>
+                            </div>
+                            <div>
+                                <strong>5.800</strong>
+                                <p>Cliques</p>
+                            </div>
+                            <div>
+                                <strong>72%</strong>
+                                <p>Efetividade</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="panel-card impact-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 14</p>
+                                <h4>Impacto da Plataforma</h4>
+                            </div>
+                        </div>
+                        <div class="impact-grid">
+                            <div><span>🌱</span><strong>Produtores alcançados</strong><p>12.458</p></div>
+                            <div><span>📖</span><strong>Conteúdos estudados</strong><p>98.720</p></div>
+                            <div><span>🤖</span><strong>Atendimentos IA</strong><p>156.320</p></div>
+                            <div><span>📋</span><strong>Diagnósticos concluídos</strong><p>8.923</p></div>
+                            <div><span>🎓</span><strong>Certificados emitidos</strong><p>4.315</p></div>
+                            <div><span>📈</span><strong>Evolução do conhecimento</strong><p>+14%</p></div>
+                            <div><span>🗺</span><strong>Municípios atendidos</strong><p>312</p></div>
+                            <div><span>🏛</span><strong>Estados participantes</strong><p>26</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ asset('js/dashboard.js') }}"></script>
+</body>
+</html>
+
+    <script src="{{ asset('js/dashboard.js') }}"></script>
+</body>
+</html>

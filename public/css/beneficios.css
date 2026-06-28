@@ -1,0 +1,55 @@
+:root {
+    --primary: #4f8cff;
+    --primary-soft: rgba(79,140,255,0.12);
+    --text: #11233b;
+    --muted: #6c7a8a;
+    --surface: #ffffff;
+    --bg: #f5f9ff;
+}
+
+body {
+    background: linear-gradient(135deg, #f4f8ff 0%, #edf4ff 100%);
+    color: var(--text);
+}
+
+.hero-card,
+.filters-card,
+.map-card,
+.list-card,
+.summary-card {
+    background: var(--surface);
+    border: 1px solid rgba(79,140,255,0.12);
+    box-shadow: 0 12px 30px rgba(17,35,59,0.06);
+}
+
+#map {
+    height: 460px;
+    border-radius: 20px;
+}
+
+.program-item {
+    border: 1px solid rgba(79,140,255,0.12);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 12px;
+    background: #f8fbff;
+}
+
+.program-item h6 {
+    margin-bottom: 4px;
+}
+
+.program-item p {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.badge {
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), #6dc7ff);
+    border: none;
+}

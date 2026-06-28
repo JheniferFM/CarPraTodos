@@ -1,0 +1,41 @@
+:root {
+    --primary: #4f8cff;
+    --primary-soft: rgba(79,140,255,0.12);
+    --text: #11233b;
+    --muted: #6c7a8a;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f9ff 0%, #eef4ff 100%);
+    color: var(--text);
+}
+
+.card {
+    border: 1px solid rgba(79,140,255,0.16);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary), #6dc7ff);
+}
+
+.step-panel {
+    display: none;
+}
+
+.step-panel.active {
+    display: block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), #6dc7ff);
+    border: none;
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}

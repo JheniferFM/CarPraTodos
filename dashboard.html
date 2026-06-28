@@ -8,6 +8,86 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="public/css/design-system.css">
     <link rel="stylesheet" href="public/css/dashboard.css">
+
+    <style>
+    /* ── Omnichannel Panel ── */
+    .omnichannel-panel { padding: 1.25rem; }
+
+    .channel-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: 1.5px solid #e2e8f0;
+        background: #fff;
+        font-size: 0.82rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .18s;
+        color: #475569;
+        position: relative;
+    }
+    .channel-btn:hover { border-color: #6366f1; color: #6366f1; }
+    .channel-btn.active { background: #6366f1; border-color: #6366f1; color: #fff; }
+    .channel-btn .bi-whatsapp { color: inherit; }
+    .channel-badge {
+        background: #ef4444;
+        color: #fff;
+        border-radius: 99px;
+        font-size: 0.68rem;
+        padding: 1px 6px;
+        font-weight: 700;
+        min-width: 18px;
+        text-align: center;
+    }
+    .channel-btn.active .channel-badge { background: rgba(255,255,255,0.35); color: #fff; }
+
+    .omni-feed {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 260px;
+        overflow-y: auto;
+    }
+    .omni-msg {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 10px 14px;
+        border-left: 3px solid #6366f1;
+        animation: fadeSlide .25s ease;
+    }
+    .omni-msg-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 4px;
+        flex-wrap: wrap;
+    }
+    .omni-channel-tag {
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 99px;
+        background: #e0e7ff;
+        color: #4338ca;
+    }
+    .omni-channel-tag.wpp  { background:#dcfce7; color:#15803d; }
+    .omni-channel-tag.mail { background:#fef9c3; color:#854d0e; }
+    .omni-channel-tag.site { background:#e0f2fe; color:#0369a1; }
+    .omni-channel-tag.tg   { background:#e0f2fe; color:#0284c7; }
+    .omni-channel-tag.ig   { background:#fce7f3; color:#be185d; }
+
+    .omni-name  { font-size: 0.82rem; font-weight: 600; color: #1e293b; }
+    .omni-meta  { font-size: 0.72rem; color: #94a3b8; margin-left: auto; white-space: nowrap; }
+    .omni-text  { font-size: 0.83rem; color: #475569; margin: 0; }
+    .omni-empty { text-align:center; color:#94a3b8; font-size:.82rem; padding:2rem 0; }
+
+    @keyframes fadeSlide {
+        from { opacity: 0; transform: translateY(6px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+    </style>
 </head>
 <body>
     <div class="page-shell">
@@ -167,33 +247,24 @@
                 </div>
             </section>
 
+            <!-- OMNICHANNEL -->
             <section class="row g-4 mb-4">
                 <div class="col-xl-6">
-                    <div class="panel-card map-panel">
+                    <div class="panel-card omnichannel-panel">
                         <div class="card-header-row">
                             <div>
                                 <p class="eyebrow mb-1">Dashboard 3</p>
-                                <h4>Mapa do Brasil</h4>
+                                <h4>Canais de Atendimento <span class="badge badge-soft-primary ms-2" style="font-size:0.7rem;vertical-align:middle;">Omnichannel</span></h4>
                             </div>
                         </div>
-                        <div class="map-content">
-                            <div class="map-legend">
-                                <span class="legend-dot legend-high"></span> Alto entendimento
-                                <span class="legend-dot legend-medium"></span> Médio
-                                <span class="legend-dot legend-low"></span> Baixo
-                            </div>
-                            <div class="map-placeholder">
-                                <div class="state-chip active" data-state="São Paulo">SP</div>
-                                <div class="state-chip" data-state="Minas Gerais">MG</div>
-                                <div class="state-chip" data-state="Bahia">BA</div>
-                                <div class="state-chip" data-state="Amazonas">AM</div>
-                                <div class="state-chip" data-state="Rio Grande do Sul">RS</div>
-                            </div>
-                            <div class="map-details">
-                                <h5 id="mapStateName">São Paulo</h5>
-                                <p class="text-muted">Usuários 3.120 · Diagnósticos 1.045 · Cursos 950 · Certificados 480 · Dúvidas 760</p>
-                            </div>
+                        <div class="channel-tabs d-flex flex-wrap gap-2 mb-3">
+                            <button class="channel-btn active" data-channel="whatsapp"><i class="bi bi-whatsapp"></i> WhatsApp <span class="channel-badge">3</span></button>
+                            <button class="channel-btn" data-channel="email"><i class="bi bi-envelope-fill"></i> E-mail <span class="channel-badge">1</span></button>
+                            <button class="channel-btn" data-channel="site"><i class="bi bi-globe2"></i> Site <span class="channel-badge">5</span></button>
+                            <button class="channel-btn" data-channel="telegram"><i class="bi bi-telegram"></i> Telegram <span class="channel-badge">2</span></button>
+                            <button class="channel-btn" data-channel="instagram"><i class="bi bi-instagram"></i> Instagram <span class="channel-badge">0</span></button>
                         </div>
+                        <div class="omni-feed" id="omniFeed"></div>
                     </div>
                 </div>
                 <div class="col-xl-6">
@@ -263,6 +334,47 @@
             </section>
 
             <section class="row g-4 mb-4">
+
+            <!-- Dashboard 3 — Mapa movido para baixo -->
+            <section class="row g-4 mb-4">
+                <div class="col-xl-6">
+                    <div class="panel-card map-panel">
+                        <div class="card-header-row">
+                            <div>
+                                <p class="eyebrow mb-1">Dashboard 3 — Mapa</p>
+                                <h4>Mapa do Brasil</h4>
+                            </div>
+                        </div>
+                        <div class="map-content">
+                            <div class="map-legend">
+                                <span class="legend-dot legend-high"></span> Alto entendimento
+                                <span class="legend-dot legend-medium"></span> Médio
+                                <span class="legend-dot legend-low"></span> Baixo
+                            </div>
+                            <div class="map-placeholder">
+                                <div class="state-chip active" data-state="São Paulo">SP</div>
+                                <div class="state-chip" data-state="Minas Gerais">MG</div>
+                                <div class="state-chip" data-state="Bahia">BA</div>
+                                <div class="state-chip" data-state="Amazonas">AM</div>
+                                <div class="state-chip" data-state="Rio Grande do Sul">RS</div>
+                            </div>
+                            <div class="map-details">
+                                <h5 id="mapStateName">São Paulo</h5>
+                                <p class="text-muted">Usuários 3.120 · Diagnósticos 1.045 · Cursos 950 · Certificados 480 · Dúvidas 760</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="panel-card d-flex align-items-center justify-content-center text-muted" style="min-height:260px;">
+                        <div class="text-center">
+                            <i class="bi bi-plus-circle fs-1 mb-2 d-block opacity-25"></i>
+                            <p class="opacity-50">Painel disponível</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
                 <div class="col-xl-4">
                     <div class="panel-card ranking-panel">
                         <div class="card-header-row">
@@ -495,5 +607,61 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="public/js/accessibility.js"></script>
     <script src="public/js/dashboard.js"></script>
+
+    <script>
+    // ── Omnichannel data ──
+    const omniData = {
+        whatsapp: [
+            { canal:"WhatsApp", tag:"wpp",  nome:"João da Silva",    data:"28/06/2026", hora:"14:32", msg:"Boa tarde! Como faço para saber se minha propriedade está regular no CAR?" },
+            { canal:"WhatsApp", tag:"wpp",  nome:"Maria Oliveira",   data:"28/06/2026", hora:"13:15", msg:"Tenho um rio passando pela minha fazenda, preciso fazer alguma coisa?" },
+            { canal:"WhatsApp", tag:"wpp",  nome:"Carlos Ferreira",  data:"27/06/2026", hora:"09:48", msg:"Quero saber mais sobre o Programa de Regularização Ambiental (PRA)." },
+        ],
+        email: [
+            { canal:"E-mail",   tag:"mail", nome:"Ana Costa",        data:"28/06/2026", hora:"10:05", msg:"Prezados, gostaria de entender os requisitos da Reserva Legal para pequenas propriedades." },
+        ],
+        site: [
+            { canal:"Site",     tag:"site", nome:"Pedro Alves",      data:"28/06/2026", hora:"15:10", msg:"Como acesso o diagnóstico da minha propriedade? Não encontrei o botão." },
+            { canal:"Site",     tag:"site", nome:"Lucia Mendes",     data:"28/06/2026", hora:"14:55", msg:"Gostaria de saber se já tenho o CAR ou se preciso cadastrar novamente." },
+            { canal:"Site",     tag:"site", nome:"Roberto Lima",     data:"28/06/2026", hora:"11:22", msg:"Qual é a diferença entre APP e Reserva Legal?" },
+            { canal:"Site",     tag:"site", nome:"Fernanda Santos",  data:"27/06/2026", hora:"16:40", msg:"Tenho dúvidas sobre o prazo para regularização ambiental." },
+            { canal:"Site",     tag:"site", nome:"Marcos Souza",     data:"27/06/2026", hora:"08:30", msg:"Como emitir o certificado de conclusão do curso?" },
+        ],
+        telegram: [
+            { canal:"Telegram", tag:"tg",   nome:"Tiago Ramos",      data:"28/06/2026", hora:"12:00", msg:"Olá! Tenho uma área de preservação, mas não sei se está dentro da APP." },
+            { canal:"Telegram", tag:"tg",   nome:"Silvia Barros",    data:"27/06/2026", hora:"17:20", msg:"Vocês têm conteúdo sobre como acessar crédito rural após regularizar?" },
+        ],
+        instagram: []
+    };
+
+    function renderOmni(channel) {
+        const feed = document.getElementById('omniFeed');
+        const msgs = omniData[channel] || [];
+        if (!msgs.length) {
+            feed.innerHTML = '<p class="omni-empty"><i class="bi bi-inbox fs-4 d-block mb-1"></i>Nenhuma mensagem neste canal.</p>';
+            return;
+        }
+        feed.innerHTML = msgs.map(m => `
+            <div class="omni-msg">
+                <div class="omni-msg-header">
+                    <span class="omni-channel-tag ${m.tag}">${m.canal}</span>
+                    <span class="omni-name">${m.nome}</span>
+                    <span class="omni-meta">${m.data} · ${m.hora}</span>
+                </div>
+                <p class="omni-text">${m.msg}</p>
+            </div>
+        `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        renderOmni('whatsapp');
+        document.querySelectorAll('.channel-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.channel-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderOmni(btn.dataset.channel);
+            });
+        });
+    });
+    </script>
 </body>
 </html>

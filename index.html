@@ -1,5 +1,3 @@
-
-Index · HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -205,5 +203,45 @@ Index · HTML
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="public/js/accessibility.js"></script>
     <script src="script.js"></script>
+
+    <!-- Botão flutuante IA -->
+    <a href="assistant.html" class="fab-ia" title="Falar com o Assistente IA">
+        <i class="bi bi-robot"></i>
+        <span class="fab-label">Assistente IA</span>
+    </a>
+
+    <style>
+    .fab-ia {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #006400, #2e7d32);
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 22px 14px 18px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        box-shadow: 0 8px 24px rgba(0,100,0,0.35);
+        z-index: 9999;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .fab-ia i {
+        font-size: 1.3rem;
+    }
+    .fab-ia:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(0,100,0,0.45);
+        color: #fff;
+    }
+    @media (max-width: 575px) {
+        .fab-ia .fab-label { display: none; }
+        .fab-ia { padding: 16px; border-radius: 50%; }
+    }
+    </style>
+
   </body>
 </html>

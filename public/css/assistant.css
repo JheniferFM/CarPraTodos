@@ -25,10 +25,10 @@ body {
 }
 
 .sidebar {
-    width: 180px;
+    width: 130px;
     background: rgba(0, 100, 0, 0.07);
     border-right: 1px solid var(--border);
-    padding: 24px 18px;
+    padding: 20px 12px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -40,12 +40,12 @@ body {
     gap: 12px;
 }
 .brand-icon {
-    width: 46px; height: 46px; border-radius: 14px;
+    width: 36px; height: 36px; border-radius: 10px;
     display: grid; place-items: center;
     background: linear-gradient(135deg, var(--primary), #6dc7ff);
 }
-.brand h5 { margin: 0; font-size: 1rem; }
-.brand p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.brand h5 { margin: 0; font-size: 0.85rem; }
+.brand p { margin: 0; color: var(--muted); font-size: 0.78rem; }
 
 .new-chat-btn {
     width: auto;
@@ -200,7 +200,7 @@ body.contrast-mode .action-btn:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 24px 16px;
     gap: 18px;
 }
 
@@ -251,7 +251,7 @@ body.contrast-mode .header-btn {
     color: #9ed0ff;
 }
 .bubble {
-    max-width: 72%;
+    max-width: 88%;
     padding: 12px 14px;
     border-radius: 16px 16px 16px 6px;
     background: var(--assistant);
